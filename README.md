@@ -2,6 +2,10 @@
 
 A starter website for people using CMaNGOS. This will allow users to login and register on your CMaNGOS powered server.
 
+## Basic Demo
+
+You can find a basic demo [here](https://cmangos.net/starter-website).
+
 ## Installation Requirements
 
 - PHP 7.1+
