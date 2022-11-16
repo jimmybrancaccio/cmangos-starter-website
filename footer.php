@@ -24,11 +24,11 @@
                         </div>
                         <?php $login = sha1(time()); ?>
                         <input type="hidden" name="login" value="<?php echo $login; ?>">
-                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-secondary">Login</button>
                 </div>
+                    </form>
             </div>
         </div>
     </div>
@@ -56,11 +56,11 @@
                         </div>
                         <?php $register = sha1(time()); ?>
                         <input type="hidden" name="register" value="<?php echo $register; ?>">
-                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-secondary">Register</button>
                 </div>
+                    </form>
             </div>
         </div>
     </div>
