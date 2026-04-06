@@ -25,6 +25,7 @@ $db = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE_NAME);
 if (isset($_POST['register'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $email    = $_POST['email'];
 
     /* Grab the users IP address. */
     $ip = $_SERVER['REMOTE_ADDR'];
@@ -44,11 +45,23 @@ if (isset($_POST['register'])) {
     $verifier = $client->generateVerifier($password);
 
     /* Insert the data into the account table within the realmd database. */
-    mysqli_query(
-        $db,
+    $stmt = $db->prepare(
         "INSERT INTO account (username, v, s, gmlevel, email, joindate, last_ip, expansion)
-        VALUES ('$username', '$verifier', '$salt',  '$gmLevel', '$email', '$joinDate', '$ip', '$expansion')"
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
     );
+    $stmt->bind_param(
+        'ssssssis',
+        $username,
+        $verifier,
+        $salt,
+        $gmLevel,
+        $email,
+        $joinDate,
+        $ip,
+        $expansion
+    );
+    $stmt->execute();
+    $stmt->close();
 
     /**
      * Finish handling your registration process,
