@@ -35,6 +35,11 @@ if (isset($_POST['login'])) {
     /* Get the salt and verifier from realmd.account for the user. */
     $query = "SELECT s, v FROM account WHERE username = '$username'";
     $result = getMySQLResult($query);
+    if (!$result) {
+        header('Location: /?login=failed');
+        exit;
+    }
+
     $saltFromDatabase = $result->s;
     $verifierFromDatabase = strtoupper($result->v);
 
@@ -44,13 +49,11 @@ if (isset($_POST['login'])) {
 
     /* Compare $verifierFromDatabase and $verifier. */
     if ($verifierFromDatabase === $verifier) {
-        /**
-         * Do login stuff here, like setting cookies/sessions...
-         */
+        $_SESSION['authenticated_user'] = $username;
+        header('Location: /?login=success');
+        exit;
     } else {
-        /**
-         * Do whatever you wanna do when the login has failed,
-         * send a failure message, redirect them to another page, etc...
-         */
+        header('Location: /?login=failed');
+        exit;
     }
 }
