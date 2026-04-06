@@ -8,7 +8,7 @@ You can find a basic demo [here](https://cmangos.net/starter-website).
 
 ## Installation Requirements
 
-- PHP 7.1+
+- PHP 8.2+
 - Web server (ex. Apache or Nginx)
 - CMaNGOS instance
 
