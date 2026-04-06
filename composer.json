@@ -1,5 +1,5 @@
 {
     "require": {
-        "laizerox/php-wowemu-auth": "^1.0"
+        "laizerox/php-wowemu-auth": "^2.0"
     }
 }

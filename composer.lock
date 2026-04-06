@@ -4,29 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8fda98573a2116eda20ea52510e797ff",
+    "content-hash": "0ec84d2f47fa6343b4e662da87b26272",
     "packages": [
         {
             "name": "laizerox/php-wowemu-auth",
-            "version": "v1.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laizerox/php-wowemu-auth.git",
-                "reference": "6fd4fb223b4b98c857864f9f9fd226ff9579ae0d"
+                "reference": "6316e4e15ac068073650cf7dff525ada0397ea6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laizerox/php-wowemu-auth/zipball/6fd4fb223b4b98c857864f9f9fd226ff9579ae0d",
-                "reference": "6fd4fb223b4b98c857864f9f9fd226ff9579ae0d",
+                "url": "https://api.github.com/repos/Laizerox/php-wowemu-auth/zipball/6316e4e15ac068073650cf7dff525ada0397ea6d",
+                "reference": "6316e4e15ac068073650cf7dff525ada0397ea6d",
                 "shasum": ""
             },
             "require": {
                 "ext-bcmath": "*",
-                "php": "^7.1",
-                "phpseclib/phpseclib": "^2.0"
+                "php": "^8.2",
+                "phpseclib/phpseclib": "^2.0.52"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7.5"
+                "phpunit/phpunit": "^11.5 || ^12.5 || ^13.0"
             },
             "type": "library",
             "autoload": {
@@ -42,27 +42,31 @@
                 {
                     "name": "Laizerox",
                     "email": "dpetmanson@gmail.com"
+                },
+                {
+                    "name": "Jimmy B.",
+                    "email": "jimmybrancaccio@icloud.com"
                 }
             ],
             "description": "Wowemu compliant SRP6 auth implementation",
             "support": {
                 "issues": "https://github.com/Laizerox/php-wowemu-auth/issues",
-                "source": "https://github.com/Laizerox/php-wowemu-auth/tree/1.0.0"
+                "source": "https://github.com/Laizerox/php-wowemu-auth/tree/v2.0.1"
             },
-            "time": "2019-07-26T21:52:49+00:00"
+            "time": "2026-03-28T02:39:35+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.47",
+            "version": "2.0.52",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "b7d7d90ee7df7f33a664b4aea32d50a305d35adb"
+                "reference": "2552c4001631d1cc844332faea6a08a49c964b28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/b7d7d90ee7df7f33a664b4aea32d50a305d35adb",
-                "reference": "b7d7d90ee7df7f33a664b4aea32d50a305d35adb",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/2552c4001631d1cc844332faea6a08a49c964b28",
+                "reference": "2552c4001631d1cc844332faea6a08a49c964b28",
                 "shasum": ""
             },
             "require": {
@@ -70,7 +74,7 @@
             },
             "require-dev": {
                 "phing/phing": "~2.7",
-                "phpunit/phpunit": "^4.8.35|^5.7|^6.0|^9.4",
+                "phpunit/phpunit": "^4.8.35|^5.7|^6.0|^8.5|^9.4",
                 "squizlabs/php_codesniffer": "~2.0"
             },
             "suggest": {
@@ -143,7 +147,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/2.0.47"
+                "source": "https://github.com/phpseclib/phpseclib/tree/2.0.52"
             },
             "funding": [
                 {
@@ -159,16 +163,16 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-02-26T04:55:38+00:00"
+            "time": "2026-03-19T02:54:44+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
 }
